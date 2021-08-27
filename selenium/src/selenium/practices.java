@@ -15,7 +15,7 @@ public class practices {
 		
 		System.setProperty("webdriver.chrome.driver","D:\\selenium\\driver\\chromedriver.exe");
 
-		//Monday
+		//Monday 23-08-2021
 		/*
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
@@ -113,7 +113,56 @@ public class practices {
 		Thread.sleep(3000);
 		
 		*/
-
+		
+		//*************************************************************************************************
+		//*************************************************************************************************
+		//*************************************************************************************************
+		//*************************************************************************************************
+		//*************************************************************************************************
+		
+		
+		//Wednesday - 25-08-2021
+		
+		
+		//ADD 10 ELEMENT and Delete 5th element 
+		
+		/*
+				WebDriver driver3=new ChromeDriver();
+				driver3.manage().window().maximize();
+				driver3.get("https://the-internet.herokuapp.com/add_remove_elements/");
+				WebElement footer= driver3.findElement(By.xpath("//div[@id='elements']"));
+				
+			    driver3.findElement(By.xpath("//button[contains(text(),'Add Element')]")).click();
+			    Thread.sleep(1000);
+			    driver3.findElement(By.xpath("//button[contains(text(),'Add Element')]")).click();
+			    Thread.sleep(1000);
+			    driver3.findElement(By.xpath("//button[contains(text(),'Add Element')]")).click();
+			    Thread.sleep(1000);
+			    driver3.findElement(By.xpath("//button[contains(text(),'Add Element')]")).click();
+			    Thread.sleep(1000);
+			    driver3.findElement(By.xpath("//button[contains(text(),'Add Element')]")).click();
+			    Thread.sleep(1000);
+			    driver3.findElement(By.xpath("//button[contains(text(),'Add Element')]")).click();
+			    Thread.sleep(1000);
+			    driver3.findElement(By.xpath("//button[contains(text(),'Add Element')]")).click();
+			    Thread.sleep(1000);
+			    driver3.findElement(By.xpath("//button[contains(text(),'Add Element')]")).click();
+			    Thread.sleep(1000);
+			    driver3.findElement(By.xpath("//button[contains(text(),'Add Element')]")).click();
+			    Thread.sleep(1000);
+			    driver3.findElement(By.xpath("//button[contains(text(),'Add Element')]")).click();
+			    Thread.sleep(3000);
+			    footer.findElement(By.xpath("(//*[@class='added-manually'])[5]")).click();
+			    Thread.sleep(5000);
+			    
+			    driver3.close();
+			    
+		 */
+		
+		//*************************************************************************************************
+		//*************************************************************************************************
+		//*************************************************************************************************
+		//*************************************************************************************************
 		//*************************************************************************************************
 		
 		//THURSDAY 26-08-2021
@@ -144,6 +193,7 @@ public class practices {
 		}
 		*/
 		
+		//*************************************************************************************************
 		
 		//Go to google.com
 		//a. type text in search text box and right click
@@ -169,6 +219,7 @@ public class practices {
 		
         */
 		
+		//*************************************************************************************************
 		
 		//https://money.rediff.com/index.html 1. Click on More In the section "Most traded companies" and print the table Table - class="dataTable"
 		
@@ -206,7 +257,7 @@ public class practices {
 		
 		*/
 		
-		
+		//*************************************************************************************************
 	
 		//go to rediff.com  Right click on the logo rediff.com
 	    /*
@@ -221,6 +272,13 @@ public class practices {
 		
 		*/
 
+		//*************************************************************************************************
+		//*************************************************************************************************
+		//*************************************************************************************************
+		//*************************************************************************************************
+		//*************************************************************************************************
+		
+		
 	}
 
 }
