@@ -154,8 +154,6 @@ public class practices {
 			    Thread.sleep(3000);
 			    footer.findElement(By.xpath("(//*[@class='added-manually'])[5]")).click();
 			    Thread.sleep(5000);
-			    
-			    
 			    driver3.close();
 			    
 		 */
