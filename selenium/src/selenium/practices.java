@@ -157,6 +157,12 @@ public class practices {
 		
 		WebElement textbox=driver.findElement(By.xpath("//input[@name='q']"));
 		act.moveToElement(textbox).click().keyDown(Keys.SHIFT).sendKeys("where is indore").build().perform();
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys(Keys.ARROW_LEFT);
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys(Keys.ARROW_LEFT);
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys(Keys.ARROW_LEFT);
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys(Keys.ARROW_LEFT);
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys(Keys.ARROW_LEFT);
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys(Keys.ARROW_LEFT);
 		Thread.sleep(3000);
 		System.out.println("done");
 		
