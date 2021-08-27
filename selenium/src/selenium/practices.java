@@ -149,6 +149,7 @@ public class practices {
 		//a. type text in search text box and right click
 		//b. Type text "Where is indore" in search box in capital letters and use left key and move 6 times 
 		
+		/*
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.google.com/");
@@ -162,11 +163,11 @@ public class practices {
 		driver.findElement(By.xpath("//input[@name='q']")).sendKeys(Keys.ARROW_LEFT);
 		driver.findElement(By.xpath("//input[@name='q']")).sendKeys(Keys.ARROW_LEFT);
 		driver.findElement(By.xpath("//input[@name='q']")).sendKeys(Keys.ARROW_LEFT);
-		driver.findElement(By.xpath("//input[@name='q']")).sendKeys(Keys.ARROW_LEFT);
+		
 		Thread.sleep(3000);
 		System.out.println("done");
 		
-
+        */
 		
 		
 		//https://money.rediff.com/index.html 1. Click on More In the section "Most traded companies" and print the table Table - class="dataTable"

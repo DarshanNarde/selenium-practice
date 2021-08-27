@@ -7,12 +7,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import java.io.File;
+import java.io.IOException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import com.google.common.io.Files;
 
 
 public class chrome {
 
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver","D:\\selenium\\driver\\chromedriver.exe");
 
@@ -238,6 +243,7 @@ public class chrome {
 		Thread.sleep(3000);
 		*/
 		
+		/*
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.flipkart.com/");
@@ -261,10 +267,73 @@ public class chrome {
 		//driver.findElement(By.xpath("//input[@id='nav-search-submit-button']")).click();
 		Thread.sleep(3000);
 		System.out.println("End of code ");
+		*/
 		
-				
+		//27-08-21 Friday
+		
+		/*
+		 //done this task during session
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.rediff.com/");
+		
+        WebElement footer= driver.findElement(By.xpath("//body/div[@id='red_container_main']/div[31]"));
+		
+		List<WebElement> allrow =footer.findElements(By.tagName("h2"));
+		System.out.println("Updated Movies List :-");
+		
+		for(WebElement ele:allrow)
+		{
+		   System.out.println(" "+ele.getText());
+		}
+        */
+		
+		/*
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://www.tizag.com/javascriptT/javascriptalert.php");
+		
+        driver.findElement(By.xpath("//tbody/tr[1]/td[1]/div[4]/form[1]/input[1]")).click();
+        
+        String text1;
+        text1=driver.switchTo().alert().getText();
+        System.out.println(text1);
+        
+        driver.switchTo().alert().accept();
+		
+		*/
+		
+		/*
+		//lib for screenshot
+					import java.io.File;
+					import java.io.IOException;
+					import org.openqa.selenium.OutputType;
+					import org.openqa.selenium.TakesScreenshot;
+					import org.openqa.selenium.WebDriver;
+					import org.openqa.selenium.chrome.ChromeDriver;
+					import com.google.common.io.Files;
+		
+		
 		 
-		 
+		 */
+		
+		/*
+		//ScreenShot 
+		
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://www.tizag.com/javascriptT/javascriptalert.php");
+		
+		TakesScreenshot sr=((TakesScreenshot)driver);
+		File fl=sr.getScreenshotAs(OutputType.FILE);
+		String distfile="D://selenium//selenium.png";
+		File trgfile=new File(distfile);
+		Files.copy(fl,trgfile);
+		System.out.println("End of code");
+		*/
+		
+		
+		
 	}
 
 }
