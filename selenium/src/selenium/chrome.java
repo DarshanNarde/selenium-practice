@@ -12,11 +12,21 @@ import java.io.IOException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import com.google.common.io.Files;
+import org.junit.Assert;
+
+
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.FluentWait; //FluentWait is a Class and it is a part of this package
+import org.openqa.selenium.support.ui.Select;
+
+import com.google.common.base.Function;
 
 
 public class chrome {
 
-
+	
 	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver","D:\\selenium\\driver\\chromedriver.exe");
@@ -95,10 +105,48 @@ public class chrome {
 		prac.close();
 		*/
 		
+		//Tuesday 
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.salesforce.com/in/form/signup/freetrial-sales/");
+		driver.manage().window().maximize();
+		/*
+		WebElement jt=driver.findElement(By.xpath("//select[@name='UserTitle']"));
+		Select jobtitle=new Select( jt );
+		jobtitle.selectByVisibleText("Sales Manager"); 	
+		Thread.sleep(3000);
+		jobtitle.selectByValue("Customer_Service_Manager_AP");		
+		Thread.sleep(3000);
+		jobtitle.selectByIndex(5); 		
+		Thread.sleep(2000);
+
+		//jobtitle.getFirstSelectedOption().getText();
+		WebElement selected = jobtitle.getFirstSelectedOption();
+		System.out.println(selected.getText()); 		
+		
+		System.out.println("- - - - - - - - - - -");
+		
+		List<WebElement> jobtitle_options = jobtitle.getOptions();
+		for(WebElement titlename : jobtitle_options)
+			System.out.println(titlename.getText());
 		
 		
 		
+		List<WebElement> label_element=driver.findElements(By.tagName("label"));
+		for(WebElement element : label_element)
+			System.out.println(element.getText());
 		
+		System.out.println("************************************");
+		List<WebElement> link_element=driver.findElements(By.tagName("a"));
+		for(WebElement element : link_element)
+				System.out.println(element.getText());
+		System.out.println("//////////////////////////////////////////");
+		
+		int sizeoflinks=link_element.size();
+		for(int i=0;i<sizeoflinks;i++)
+			System.out.println(link_element.get(i).getText());
+		
+		
+		*/
 		
 		
 		
@@ -330,6 +378,43 @@ public class chrome {
 		File trgfile=new File(distfile);
 		Files.copy(fl,trgfile);
 		System.out.println("End of code");
+		*/
+		
+		
+		/*
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://softwaretestingplace.blogspot.com/2017/02/selenium-fluent-wait.html");
+		driver.findElement(By.xpath("//*[@id='post-body-5280210221385817166']/div[1]/button")).click();
+		
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(30, TimeUnit.SECONDS)
+				.pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
+		//Timeout - 30 seconds; Check every 5 seconds; ignore NoSuchElementException
+
+		WebElement element = wait.until(new Function<WebDriver, WebElement>() {
+			public WebElement apply(WebDriver driver) {
+				WebElement element = driver.findElement(By.xpath("//*[@id='demo']"));
+				String getTextOnPage = element.getText();
+				if (getTextOnPage.equals("Software Testing Material - DEMO PAGE")) {
+					System.out.println(getTextOnPage);
+					System.out.println("Found element - DEMO PAGE");
+					return element;
+				} else 
+				{
+					System.out.println("FluentWait Failed");
+					return null;
+				}
+			}
+		});
+		*/
+		
+		//assert
+		/*
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.google.com/");
+		System.out.println(driver.getTitle());
+		
+		Assert.assertEquals("Google", driver.getTitle());
 		*/
 		
 		
