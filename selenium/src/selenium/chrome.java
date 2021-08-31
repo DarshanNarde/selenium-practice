@@ -22,15 +22,30 @@ import org.openqa.selenium.support.ui.FluentWait; //FluentWait is a Class and it
 import org.openqa.selenium.support.ui.Select;
 
 import com.google.common.base.Function;
+//import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;//30-08-2021
+
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+//import java.util.concurrent.TimeUnit;
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.chrome.ChromeDriver; //31-08-2021
 
 
 public class chrome {
 
 	
+
+
 	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver","D:\\selenium\\driver\\chromedriver.exe");
-
+ 
 		/*WebDriver driver=new ChromeDriver();
 		driver.get("https://login.salesforce.com/");
 		
@@ -106,10 +121,12 @@ public class chrome {
 		*/
 		
 		//Tuesday 
+		
+		/*
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.salesforce.com/in/form/signup/freetrial-sales/");
 		driver.manage().window().maximize();
-		/*
+		
 		WebElement jt=driver.findElement(By.xpath("//select[@name='UserTitle']"));
 		Select jobtitle=new Select( jt );
 		jobtitle.selectByVisibleText("Sales Manager"); 	
@@ -365,21 +382,21 @@ public class chrome {
 		 
 		 */
 		
-		/*
-		//ScreenShot 
 		
+		//ScreenShot 
+		/*
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("http://www.tizag.com/javascriptT/javascriptalert.php");
+		driver.get("https://www.youtube.com/");
 		
 		TakesScreenshot sr=((TakesScreenshot)driver);
 		File fl=sr.getScreenshotAs(OutputType.FILE);
-		String distfile="D://selenium//selenium.png";
+		String distfile="D://selenium//youtube.png";
 		File trgfile=new File(distfile);
 		Files.copy(fl,trgfile);
 		System.out.println("End of code");
-		*/
 		
+		*/
 		
 		/*
 		WebDriver driver = new ChromeDriver();
@@ -417,6 +434,67 @@ public class chrome {
 		Assert.assertEquals("Google", driver.getTitle());
 		*/
 		
+		
+		//30-08-2021
+		
+		/*
+		WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://www.speedtest.net/");
+        //driver.get("https://demoqa.com/links");
+
+        //Storing the links in a list and traversing through the links
+        List<WebElement> links = driver.findElements(By.tagName("a"));
+
+        // This line will print the number of links and the count of links.
+        System.out.println("No of links are "+ links.size());  
+      
+        //checking the links fetched.
+        for(int i=0;i<links.size();i++)
+        {
+            WebElement E1= links.get(i);
+            String url= E1.getAttribute("href");
+            verifyLinks(url);
+        }
+        
+        driver.quit();
+      }
+    
+    
+    public static void verifyLinks(String linkUrl)
+    {
+        try
+        {
+            URL url = new URL(linkUrl);
+
+            //Now we will be creating url connection and getting the response code
+            HttpURLConnection httpURLConnect=(HttpURLConnection)url.openConnection();
+            httpURLConnect.setConnectTimeout(5000);
+            httpURLConnect.connect();
+            if(httpURLConnect.getResponseCode()>=400)
+            {
+            	System.out.println(linkUrl+" - "+httpURLConnect.getResponseMessage()+"is a broken link");
+            }    
+       
+            //Fetching and Printing the response code obtained
+            else{
+                System.out.println(linkUrl+" - "+httpURLConnect.getResponseMessage());
+            }
+        }catch (IOException e) {
+        	System.out.println("Exception in url "+linkUrl);
+      }
+		*/
+		
+		
+		
+		//31-08-2021
+		
+		
+				
+			
+		
+		
+	
 		
 		
 	}
